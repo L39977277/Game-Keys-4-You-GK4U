@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK4U | Contact Page</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset/reset.css">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/pages/navBarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/pages/helpStyle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/themeModes.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navBar">
+        
+        <!-- Logo -->
+        <a href="../index.html" class="navLogo">
+          <img src="../assets/imgs/logo/imgLogo.png" alt="Site Logo">
+        </a>
+
+        <!-- Links -->
+        <div id="navLinks" class="navLinks">
+          <a href="../index.html">Main Store</a>
+          <a href="helpPage.html">Help Page</a>
+        </div>
+
+        <!-- Theme Toggle -->
+        <div class="navThemeToggle">
+          <button onclick="changeTheme()">
+            <img id="themeIcon" src="../assets/imgs/light/imgLight.png" alt="Toggle Theme">
+          </button>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <button class="navMenuButton" type="button" onclick="toggleMenu()">
+          <img src="../assets/imgs/menu/iconDarkMenu.svg" alt="Menu" class="menuIcon">
+        </button>
+      </nav>
+    </header>
+
+    <section>
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Contact GK4U</h2>
+          <p>We’d love to hear from you! Fill out the form below or reach out directly to our team.</p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <form action="mailto:support@gk4u.co.uk" method="post" enctype="text/plain">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
+
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="Write your message..." rows="6" required></textarea>
+
+              <input type="submit" value="Send Message">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        if (navLinks.classList.contains("show")) {
+          navLinks.classList.remove("show");
+        } else {
+          navLinks.classList.add("show");
+        }
+      }
+
+      function changeTheme() {
+        var body = document.body;
+        var themeIcon = document.getElementById("themeIcon");
+        if (body.classList.contains("dark-mode")) {
+          body.classList.remove("dark-mode");
+          themeIcon.src = "../assets/imgs/light/imgDark.png";
+        } else {
+          body.classList.add("dark-mode");
+          themeIcon.src = "../assets/imgs/light/imgLight.png";
+        }
+      }
+    </script>
+  </body></html>

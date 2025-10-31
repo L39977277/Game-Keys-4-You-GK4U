@@ -1,0 +1,362 @@
+body.dark-mode .navBar {
+  background-color: #1E1E1E;
+  border-bottom: 2px solid white;
+}
+
+body.dark-mode .navLinks a {
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .navLinks a::after {
+  background: #ff6666;
+}
+
+body.dark-mode .navLinks a:hover {
+  color: #ff6666;
+}
+
+body.dark-mode .menuIcon {
+  filter: invert(1) brightness(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  body.dark-mode .navLinks {
+    background: #1c1c1c;
+    border: 1px solid white;
+  }
+
+  body.dark-mode .navLinks a {
+    color: #f0f0f0;
+  }
+
+  body.dark-mode .navLinks a:hover {
+    color: #ff6666;
+  }
+
+  .navLogo img {
+    height: 35px;
+  }
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #E0E0E0;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid white;
+}
+
+body.dark-mode #sectionCart {
+  border-top: 1px solid white;
+  background-color: #1e1d1d5e;
+}
+
+body.dark-mode .cartSystemLayout {
+  background: #1E1E1E;
+  border: 1px solid white;
+  color: #E0E0E0;
+}
+
+body.dark-mode .cartSystemCartTotal,
+body.dark-mode .cartSystemCartTotal p {
+  color: #FFFFFF;
+}
+
+body.dark-mode #cartItemsList li {
+  color: #000000;
+  border: 1px solid #444;
+}
+
+body.dark-mode .cartBuyButton {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+body.dark-mode .cartBuyButton:hover {
+  background-color: #752727;
+  transform: translateY(-2px);
+}
+
+body.dark-mode #sectionHero,
+body.dark-mode #sectionCategory {
+  background-color: #121212;
+  color: #E0E0E0;
+  border-top: 1px solid white;
+}
+
+body.dark-mode #sectionFooter {
+  background-color: #101010;
+  border-top: 1px solid white;
+}
+
+body.dark-mode #sectionDeals {
+  background: #181818;
+  color: #E0E0E0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid white;
+}
+
+body.dark-mode #sectionCart {
+  background-color: #1e1d1d5e;
+  border-top: 1px solid white;
+}
+
+body.dark-mode .cartSystemLayout {
+  background: #1E1E1E;
+  border: 1px solid #333;
+  color: #E0E0E0;
+}
+
+body.dark-mode h1 {
+  color: #ff6666;
+  text-transform: uppercase;
+}
+
+body.dark-mode .footerTitle {
+  color: #ff6666;
+  text-transform: uppercase;
+}
+
+body.dark-mode .sectionDealsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #DADADA;
+}
+
+body.dark-mode .sectionDealsText h1 {
+  border-bottom: 2px solid #3A3A3A;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+body.dark-mode .sectionDealsText p,
+body.dark-mode .heroText p,
+body.dark-mode .categoryText p {
+  color: #E2E2E2;
+  background: #242424;
+  border: 1px solid #3A3A3A;
+  border-radius: 10px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  max-width: 650px;
+}
+
+body.dark-mode p span {
+  text-decoration-color: #ff6666;
+  color: #ff7878;
+  font-weight: 450;
+}
+
+body.dark-mode .cartSystemCartTotal,
+body.dark-mode .cartSystemCartTotal p {
+  color: #FFFFFF;
+}
+
+body.dark-mode hr {
+  border-top: 1px solid #FFFFFF;
+}
+
+body.dark-mode #cartItemsList li {
+  color: #000000;
+  border: 1px solid #444;
+}
+
+body.dark-mode .cartBuyButton,
+body.dark-mode .dealsCardButton,
+body.dark-mode .categoryCardButton,
+body.dark-mode .btnBuy {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 42px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .cartBuyButton:hover,
+body.dark-mode .dealsCardButton:hover,
+body.dark-mode .categoryCardButton:hover,
+body.dark-mode .btnBuy:hover {
+  background-color: #752727;
+  transform: translateY(-2px);
+}
+
+body.dark-mode .dealsCardButton {
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+body.dark-mode .cartContainer,
+body.dark-mode .userContainer {
+  background-color: #1E1E1E;
+  border: 1px solid #444;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+body.dark-mode .labelContainer {
+  color: #ff6666;
+}
+
+body.dark-mode .labelContainer input {
+  width: 100%;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+body.dark-mode .labelContainer input::placeholder {
+  color: #b57cff;
+}
+
+body.dark-mode .cartHeader,
+body.dark-mode .cartTotalHolder {
+  display: flex;
+  justify-content: space-between;
+  color: #ff6666;
+}
+
+body.dark-mode .btnBuy,
+body.dark-mode input[type=submit] {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 42px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .btnBuy:hover,
+body.dark-mode .categoryCardButton:hover,
+body.dark-mode input[type=submit]:hover {
+  background-color: #752727;
+  transform: translateY(-2px);
+}
+
+/* Modal styling */
+body.dark-mode .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .modalContent {
+  background-color: #1E1E1E;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #444;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Modal close button */
+body.dark-mode .closeBtn {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .closeBtn:hover,
+body.dark-mode .closeBtn:focus {
+  color: #b57cff;
+  text-decoration: none;
+}
+
+body.dark-mode .container {
+  background-color: #1E1E1E;
+  border: 2px solid #444;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .container p {
+  color: #cccccc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body.dark-mode .column {
+  float: left;
+  width: 100%;
+}
+
+body.dark-mode .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  body.dark-mode .column,
+  body.dark-mode input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+body.dark-mode .card,
+body.dark-mode .card p {
+  color: black;
+}
+
+body.dark-mode #sectionFooter {
+  background-color: #392a2a;
+}
+
+body.dark-mode .footerTitle {
+  border-bottom: 1px solid #619ddb;
+}
+
+/* Smaller screen font scaling */
+@media screen and (max-width: 425px) {
+  body.dark-mode .heroText,
+  body.dark-mode .slideshowContainer,
+  body.dark-mode .sectionDealsText,
+  body.dark-mode .dealsCard,
+  body.dark-mode .categoryText,
+  body.dark-mode .dealsCardContainer,
+  body.dark-mode .categoryCardItem {
+    font-size: 0.9rem;
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+
+  body.dark-mode .heroText h1,
+  body.dark-mode .sectionDealsText h1,
+  body.dark-mode .categoryText h1 {
+    font-size: 1.4rem;
+  }
+
+  body.dark-mode .heroText p,
+  body.dark-mode .sectionDealsText p,
+  body.dark-mode .categoryText p {
+    font-size: 0.85rem;
+  }
+}

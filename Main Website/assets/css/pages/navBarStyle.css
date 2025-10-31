@@ -1,0 +1,146 @@
+/* --- Navbar Styles --- CSS UnderLine Trasnistion: https://stackoverflow.com/questions/30352431/css-transition-not-working-with-underline */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid black;
+  padding: 7px 16px;
+  background: white;
+}
+
+.navLogo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.navLinks a {
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.navLinks a:hover {
+  color: #800080;
+  transform: scale(1.05);
+}
+
+/* Under Line Effect */
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width 0.3s ease;
+}
+
+/* --- Theme Toggle Button --- */
+.navThemeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navThemeToggle button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navThemeToggle img {
+  width: 28px;
+  height: auto;
+  display: block;
+  padding: 0;
+}
+
+/* --- Menu Button (Mobile) --- */
+.navMenuButton {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuIcon {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+/* --- Responsive (Mobile) --- Tutorial Reference: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+@media screen and (max-width: 600px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLogo img {
+    height: 35px;
+  }
+
+  .navMenuButton {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+
+  .navThemeToggle {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid black;
+  }
+
+  .navLinks.show {
+    display: flex;
+  }
+
+  .navLinks a {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* --- Base --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #ffe5e5;
+}
+
+header {
+  position: relative;
+  z-index: 100;
+}

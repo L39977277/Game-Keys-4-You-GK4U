@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK4U | Buy Page</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset/reset.css">
+    
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/pages/navBarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/pages/buyStyle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/themeModes.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navBar">
+        
+        <!-- Logo -->
+        <a href="../index.html" class="navLogo">
+          <img src="../assets/imgs/logo/imgLogo.png" alt="Site Logo">
+        </a>
+        
+        <!-- Links -->
+        <div id="navLinks" class="navLinks">
+          <a href="../index.html">Main Store</a>
+          <a href="help.html">Help Page</a>
+          <a href="contactPage.html">Contact Page</a>
+        </div>
+        
+        <!-- Theme Toggle -->
+        <div class="navThemeToggle">
+          <button onclick="changeTheme()">
+            <img id="themeIcon" src="../assets/imgs/light/imgLight.png" alt="Toggle Theme">
+          </button>
+        </div>
+        
+        <!-- Hamburger Menu -->
+        <button class="navMenuButton" type="button" onclick="toggleMenu()">
+          <img src="../assets/imgs/menu/iconDarkMenu.svg" alt="Menu" class="menuIcon">
+        </button>
+      </nav>
+    </header>
+
+    <section>
+      <div class="cartContainer">
+        <div class="cartHeader">
+          <h4>Cart</h4>
+          <span><b id="cartCount">0</b> Items</span>
+        </div>
+        <hr>
+        <ul id="cartItems" class="cartItemsList"></ul>
+        <hr>
+        <div class="cartTotalHolder">
+          <span><b>Total</b>:</span>
+          <span>£<span id="cartTotal">0</span></span>
+        </div>
+      </div>
+
+      <div class="userContainer">
+        <form>
+          <div class="labelContainer">
+            <div>
+              <label for="name">Name:</label>
+              <input id="name" name="name" required>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div>
+              <label for="postcode">Post Code:</label>
+              <input id="postcode" name="postcode" required>
+            </div>
+          </div>
+          <button type="submit" class="btnBuy">Buy Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="myModal" class="modal">
+      <div class="modalContent">
+        <span class="closeBtn">×</span>
+        <div id="thankYouMessage">
+          <p>Thank you for your purchase! You will receive a confirmation email shortly.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/buy.js" defer></script>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        if (navLinks.classList.contains("show")) {
+          navLinks.classList.remove("show");
+        } else {
+          navLinks.classList.add("show");
+        }
+      }
+
+      function changeTheme() {
+        var body = document.body;
+        var themeIcon = document.getElementById("themeIcon");
+        if (body.classList.contains("dark-mode")) {
+          body.classList.remove("dark-mode");
+          themeIcon.src = "../assets/imgs/light/imgDark.png";
+        } else {
+          body.classList.add("dark-mode");
+          themeIcon.src = "../assets/imgs/light/imgLight.png";
+        }
+      }
+    </script>
+  </body></html>
