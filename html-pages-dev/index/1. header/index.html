@@ -1,1 +1,73 @@
+<!DOCTYPE html><html lang="en">
 
+<head>
+  <title>Header</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reset Sheets-->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset/reset.css">
+
+  <!-- Style Sheets-->
+  <link rel="stylesheet" type="text/css" href="assets/css/mainStyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/themeModes.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navBar">
+    <!-- Logo -->
+    <a href="index.html" class="navLogo">
+      <img src="assets/imgs/logo/imgLogo.png" alt="Site Logo">
+    </a>
+
+    <!-- Links -->
+    <div id="navLinks" class="navLinks">
+      <a href="#sectionHero">Information</a>
+      <a href="#sectionDeals">Deals</a>
+      <a href="#sectionCategory">Games</a>
+      <a href="#sectionFooter">Contact</a>
+      <a href="pages/helpPage.html">Help</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="navThemeToggle">
+      <button onclick="changeTheme()">
+        <img id="themeIcon" src="assets/imgs/light/imgLight.png" alt="Toggle Theme">
+      </button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <button class="navMenuButton" type="button" onclick="toggleMenu()">
+      <img src="assets/imgs/menu/iconDarkMenu.svg" alt="Menu" class="menuIcon">
+    </button>
+  </nav>
+</header>
+
+<script>
+  function changeTheme() {
+    var body = document.body;
+    var themeIcon = document.getElementById("themeIcon");
+
+    if (body.classList.contains("dark-mode")) {
+      body.classList.remove("dark-mode");
+      themeIcon.src = "assets/imgs/light/imgDark.png";
+    } else {
+      body.classList.add("dark-mode");
+      themeIcon.src = "assets/imgs/light/imgLight.png";
+    }
+  }
+
+  function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+
+    if (navLinks.classList.contains("show")) {
+      navLinks.classList.remove("show");
+    } else {
+      navLinks.classList.add("show");
+    }
+  }
+</script>
+
+</body></html>

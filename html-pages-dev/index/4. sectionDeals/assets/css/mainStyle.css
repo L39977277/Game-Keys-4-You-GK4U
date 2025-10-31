@@ -1,0 +1,334 @@
+/* Navbar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid black;
+  padding: 7px 16px;
+  background: white;
+}
+
+/* Logo */
+.navLogo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+/* Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.navLinks a {
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+/* Hover Animation */
+.navLinks a:hover {
+  color: #800080;
+  transform: scale(1.05);
+}
+
+/* Underline Hover Effect */
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width 0.3s ease;
+}
+
+/* Theme toggle button (sun/moon icon) */
+.navThemeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navThemeToggle button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navThemeToggle img {
+  width: 28px;
+  height: auto;
+  display: block;
+  padding: 0;
+}
+
+/* Hamburger menu button (mobile only) */
+.navMenuButton {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuIcon {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Screens */
+@media screen and (max-width: 600px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLogo img {
+    height: 35px;
+  }
+
+  .navMenuButton {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+
+  .navThemeToggle {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid black;
+  }
+
+  .navLinks.show {
+    display: flex;
+  }
+
+  .navLinks a {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #ffe5e5;
+}
+
+header {
+  position: relative;
+  z-index: 100;
+}
+
+hr {
+  width: 100%;
+  margin: 8px 0 12px 0;
+  border: none;
+  border-top: 1px solid #000;
+}
+
+/* Cart Section */
+#sectionCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffefcd;
+  margin: 0;
+  padding: 15px;
+}
+
+/* Main Cart */
+.navCartSystem {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Cart Layout */
+.cartSystemLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  width: 320px;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+/* Total Amount */
+.cartSystemCartTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.cartSystemCartTotal p {
+  margin: 0;
+}
+
+/* Notification Area */
+.cartSystemNotifcation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
+}
+
+/* Cart Items List */
+#cartItemsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#cartItemsList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  font-size: 14px;
+  background-color: #add8e6;
+  border-radius: 4px;
+  min-height: 20px;
+}
+
+/* Checkout / Buy Button */
+.cartBuyButton {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 42px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 11px 23px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cartBuyButton:hover {
+  background-color: #9494b8;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+#sectionHero {
+  margin: 0;
+  padding: 0;
+  background-color: #ffe5e5;
+  color: #000;
+  border-top: 1px solid #000;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.heroText h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.heroText p {
+  font-size: 18px;
+  max-width: 650px;
+  text-align: justify;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 14px 18px;
+  line-height: 1.75;
+  font-weight: 350;
+}
+
+/* Deals Section */
+#sectionDeals {
+  margin: 0;
+  padding: 0;
+  background-color: #c2b0e3;
+  color: #000;
+  border-top: 1px solid #000;
+}
+
+.sectionDealsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+}
+
+.sectionDealsText h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+}
+
+.sectionDealsText p {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 600px;
+  text-align: justify;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* Main Card Deals */
+.dealsCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}

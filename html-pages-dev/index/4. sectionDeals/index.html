@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <title>DEALS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reset Sheets -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset/reset.css">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" type="text/css" href="assets/css/mainStyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/themeModes.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/hero/imgCarousel.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/deals/listCards.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navBar">
+    <!-- Logo -->
+    <a href="index.html" class="navLogo">
+      <img src="assets/imgs/logo/imgLogo.png" alt="Site Logo">
+    </a>
+
+    <!-- Links -->
+    <div id="navLinks" class="navLinks">
+      <a href="#sectionHero">Information</a>
+      <a href="#sectionDeals">Deals</a>
+      <a href="#sectionCategory">Games</a>
+      <a href="#sectionFooter">Contact</a>
+      <a href="pages/helpPage.html">Help</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="navThemeToggle">
+      <button onclick="changeTheme()">
+        <img id="themeIcon" src="assets/imgs/light/imgLight.png" alt="Toggle Theme">
+      </button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <button class="navMenuButton" type="button" onclick="toggleMenu()">
+      <img src="assets/imgs/menu/iconDarkMenu.svg" alt="Menu" class="menuIcon">
+    </button>
+  </nav>
+</header>
+
+<section id="sectionCart" aria-label="Cart Section">
+  <!-- Account Buttons -->
+  <div class="navCartSystem">
+    <div class="cartSystemLayout">
+      
+      <!-- Cart Total with Icon -->
+      <div class="cartSystemCartTotal">
+        <img id="cartLogoSrc" src="assets/imgs/cart/imgCartLight.png" alt="Shopping Cart Icon" style="width: 30px; height: 20px;">
+        <p>Total: £<span id="cardTotalPrice">0</span></p>
+      </div>
+      
+      <!-- Horizontal Rule -->
+      <hr>
+      
+      <!-- Cart Items & Buy Button -->
+      <div class="cartSystemNotifcation">
+        <ul id="cartItemsList" aria-label="Cart Itmes Listed"></ul>
+        <button id="buy-now" class="cartBuyButton" aria-label="Buy Now Button" style="margin-top: 10px;">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sectionHero">
+  <div class="heroText">
+    <h1>Some of the Freshest <span style="text-decoration:underline;">Drops</span>!</h1>
+    <p>
+      Here you're able to slide through and see some of the most recent games, most active, and most played titles within the current 
+      <span style="text-decoration: underline;">Season</span>. 
+      Simply use the slide feature to explore the most up-to-date graphics that gaming has to offer!
+    </p>
+  </div>
+
+  <!-- Slideshow (Source: W3Schools - How To Slideshow) -->
+  <div class="slideshowContainer">
+
+    <div class="mySlides fadeSlide">
+      <div class="numberText">1 / 5</div>
+      <img src="assets/imgs/header/gameFIFA.png" alt="EA SPORTS FC 26">
+      <div class="slideText">EA SPORTS FC 26</div>
+    </div>
+
+    <div class="mySlides fadeSlide">
+      <div class="numberText">2 / 5</div>
+      <img src="assets/imgs/header/gameSH2.png" alt="Silent Hill 2">
+      <div class="slideText">Silent Hill 2</div>
+    </div>
+
+    <div class="mySlides fadeSlide">
+      <div class="numberText">3 / 5</div>
+      <img src="assets/imgs/header/gameBO6.png" alt="Call of Duty: Black Ops 6">
+      <div class="slideText">Black Ops 6</div>
+    </div>
+
+    <div class="mySlides fadeSlide">
+      <div class="numberText">4 / 5</div>
+      <img src="assets/imgs/header/gameFM26.png" alt="Football Manager 26">
+      <div class="slideText">Football Manager 26</div>
+    </div>
+
+    <div class="mySlides fadeSlide">
+      <div class="numberText">5 / 5</div>
+      <img src="assets/imgs/header/gameDRIFT.png" alt="CarX Drift Racing Online">
+      <div class="slideText">CarX Drift Racing Online</div>
+    </div>
+
+    <a class="prevBtn" onclick="plusSlides(-1)">❮</a>
+    <a class="nextBtn" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div class="slideDots">
+    <span class="slideDot active" onclick="currentSlide(1)" role="button" aria-label="Go to slide 1"></span>
+    <span class="slideDot" onclick="currentSlide(2)" role="button" aria-label="Go to slide 2"></span>
+    <span class="slideDot" onclick="currentSlide(3)" role="button" aria-label="Go to slide 3"></span>
+    <span class="slideDot" onclick="currentSlide(4)" role="button" aria-label="Go to slide 4"></span>
+    <span class="slideDot" onclick="currentSlide(5)" role="button" aria-label="Go to slide 5"></span>
+  </div>
+</section>
+
+<section id="sectionDeals">
+  <div class="sectionDealsText">
+    <h1>Hottest In Sales Right Now!</h1>
+    <p>Here you can see the hottest games, from <span >EA SPORTS FC 26</span>, <span >Silent Hill 2</span>, and <span >Call of Duty®: Black Ops 6</span>. These are some of the most bought games within recent months.</p>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="dealsCardContainer">
+    <div class="dealsCard">
+      <div class="dealsCardImageWrapper">
+        <img src="assets/imgs/header/cardFIFA.png" alt="EA SPORTS FC 26">
+      </div>
+      <div class="dealsCardBody">
+        <div class="dealsCardHeader">
+          <h4 class="dealsCardTitle">EA SPORTS FC 26</h4>
+          <span class="dealsCardPrice">£59.99</span>
+        </div>
+        <p class="dealsCardDescription">The Club is Yours in EA SPORTS FC™ 26. Play your way with an overhauled gameplay experience powered by community feedback, Manager Live Challenges, and Archetypes inspired by greats of the game.</p>
+        <span style="font-size:0.8em; color:#888;">
+          Source: <a href="https://store.steampowered.com/app/3405690/EA_SPORTS_FC_26/" target="_blank" rel="noopener noreferrer">Steam</a>
+        </span>
+        <div class="dealsCardButtons">
+          <button class="dealsCardButton" onclick="addItemBasket('EA SPORTS FC 26', '59.99')">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dealsCard">
+      <div class="dealsCardImageWrapper">
+        <img src="assets/imgs/header/cardSH2.png" alt="Silent Hill 2">
+      </div>
+      <div class="dealsCardBody">
+        <div class="dealsCardHeader">
+          <h4 class="dealsCardTitle">Silent Hill 2</h4>
+          <span class="dealsCardPrice">£59.99</span>
+        </div>
+        <p class="dealsCardDescription">Investigating a letter from his late wife, James returns to where they made so many memories Silent Hill. Ghost town, monsters, deep fog, puzzles, and clues in this remake of Silent Hill 2.</p>
+        <span style="font-size:0.8em; color:#888;">
+          Source: <a href="https://store.steampowered.com/app/2124490/SILENT_HILL_2" target="_blank" rel="noopener noreferrer">Steam</a>
+        </span>
+        <div class="dealsCardButtons">
+          <button class="dealsCardButton" onclick="addItemBasket('Silent Hill 2', '59.99')">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dealsCard">
+      <div class="dealsCardImageWrapper">
+        <img src="assets/imgs/header/cardBO6.png" alt="Call of Duty®: Black Ops 6">
+      </div>
+      <div class="dealsCardBody">
+        <div class="dealsCardHeader">
+          <h4 class="dealsCardTitle">Call of Duty®: Black Ops 6</h4>
+          <span class="dealsCardPrice">£34.99</span>
+        </div>
+        <p class="dealsCardDescription">Call of Duty®: Black Ops 6 features cinematic single-player Campaign, best-in-class Multiplayer, and the epic return of Round-Based Zombies.</p>
+        <span style="font-size:0.8em; color:#888;">
+          Source: <a href="https://store.steampowered.com/app/2933620/Call_of_Duty_Black_Ops_6/" target="_blank" rel="noopener noreferrer">Steam</a>
+        </span>
+        <div class="dealsCardButtons">
+          <button class="dealsCardButton" onclick="addItemBasket('Call of Duty®: Black Ops 6', '34.99')">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function changeTheme() {
+  var body = document.body;
+  var themeIcon = document.getElementById("themeIcon");
+  var cartIcon = document.getElementById("cartLogoSrc"); // Cart icon
+
+  if (body.classList.contains("dark-mode")) {
+    body.classList.remove("dark-mode");
+    themeIcon.src = "assets/imgs/light/imgDark.png";
+    cartIcon.src = "assets/imgs/cart/imgCartDark.svg";
+  } else {
+    body.classList.add("dark-mode");
+    themeIcon.src = "assets/imgs/light/imgLight.png";
+    cartIcon.src = "assets/imgs/cart/imgCartLight.png"; 
+  }
+}
+
+function toggleMenu() {
+  var navLinks = document.getElementById("navLinks");
+
+  if (navLinks.classList.contains("show")) {
+    navLinks.classList.remove("show");
+  } else {
+    navLinks.classList.add("show");
+  }
+}
+
+// Slide Show Carousel.JS -  https://www.w3schools.com/howto/howto_js_slideshow.asp
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("slideDot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>

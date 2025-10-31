@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <title>DEALS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reset Sheets -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset/reset.css">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" type="text/css" href="assets/css/mainStyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/themeModes.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/hero/imgCarousel.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/deals/listCards.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navBar">
+    <!-- Logo -->
+    <a href="index.html" class="navLogo">
+      <img src="assets/imgs/logo/imgLogo.png" alt="Site Logo">
+    </a>
+
+    <!-- Links -->
+    <div id="navLinks" class="navLinks">
+      <a href="#sectionHero">Information</a>
+      <a href="#sectionDeals">Deals</a>
+      <a href="#sectionCategory">Games</a>
+      <a href="#sectionFooter">Contact</a>
+      <a href="pages/helpPage.html">Help</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="navThemeToggle">
+      <button onclick="changeTheme()">
+        <img id="themeIcon" src="assets/imgs/light/imgLight.png" alt="Toggle Theme">
+      </button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <button class="navMenuButton" type="button" onclick="toggleMenu()">
+      <img src="assets/imgs/menu/iconDarkMenu.svg" alt="Menu" class="menuIcon">
+    </button>
+  </nav>
+</header>
+
+<section id="sectionCart" aria-label="Cart Section">
+  <!-- Account Buttons -->
+  <div class="navCartSystem">
+    <div class="cartSystemLayout">
+      
+      <!-- Cart Total with Icon -->
+      <div class="cartSystemCartTotal">
+        <img id="cartLogoSrc" src="assets/imgs/cart/imgCartLight.png" alt="Shopping Cart Icon" style="width: 30px; height: 20px;">
+        <p>Total: £<span id="cardTotalPrice">0</span></p>
+      </div>
+      
+      <!-- Horizontal Rule -->
+      <hr>
+      
+      <!-- Cart Items & Buy Button -->
+      <div class="cartSystemNotifcation">
+        <ul id="cartItemsList" aria-label="Cart Itmes Listed"></ul>
+        <button id="buy-now" class="cartBuyButton" aria-label="Buy Now Button" style="margin-top: 10px;">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+function changeTheme() {
+  var body = document.body;
+  var themeIcon = document.getElementById("themeIcon");
+  var cartIcon = document.getElementById("cartLogoSrc"); // Cart icon
+
+  if (body.classList.contains("dark-mode")) {
+    body.classList.remove("dark-mode");
+    themeIcon.src = "assets/imgs/light/imgDark.png";
+    cartIcon.src = "assets/imgs/cart/imgCartDark.svg";
+  } else {
+    body.classList.add("dark-mode");
+    themeIcon.src = "assets/imgs/light/imgLight.png";
+    cartIcon.src = "assets/imgs/cart/imgCartLight.png"; 
+  }
+}
+
+function toggleMenu() {
+  var navLinks = document.getElementById("navLinks");
+
+  if (navLinks.classList.contains("show")) {
+    navLinks.classList.remove("show");
+  } else {
+    navLinks.classList.add("show");
+  }
+}
+</script>
+
+</body>
+</html>
